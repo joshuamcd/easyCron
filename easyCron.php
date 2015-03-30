@@ -25,7 +25,7 @@ if (!$f) {
     $fileContents = (array)$fileContents;
 
     foreach ($cronFiles as $task => $freq){
-		if($output) print "<tr><td>Waiting Until: ".strtotime("+".$freq['days']." days ".$freq['hours']." hours ".$freq['minutes']." minutes", $fileContents[$task])."</td></tr>";
+        if($output) print "<tr><td>Waiting Until: ".strtotime("+".$freq['days']." days ".$freq['hours']." hours ".$freq['minutes']." minutes", $fileContents[$task])."</td></tr>";
         if(!array_key_exists($task,$fileContents)) {
             $fileContents[$task] = strtotime("now");
         }
